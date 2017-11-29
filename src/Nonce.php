@@ -26,36 +26,52 @@ class Nonce
      */
     public function __toString()
     {
+        if (empty($this->nonce)) {
+            $this->nonce = $this->generateNonce();
+        }
+
         return $this->nonce;
     }
 
     /**
      * get class properties
      * @since 1.0
-     * @param  string $var class property variable
-     * @return string      property value
+     * @return string      property $action value
      */
-    public function __get($var)
+    public function getAction()
     {
-        if (isset($this->$var)) {
-            return $this->$var;
-        }
-        return null;
+        return $this->action;
+    }
+
+    /**
+     * get class properties
+     * @since 1.0
+     * @return string      property $name value
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+
+    /**
+     * set class properties except nonce
+     * @since 1.0
+     * @param string $value assign $val to property $name
+     */
+    public function setName($val)
+    {
+        $this->name = $val;
     }
 
     /**
      * set class properties except nonce
      * @since 1.0
-     * @param string $var   variable name (class property name)
-     * @param string $value assigned value needed
+     * @param string $value assign $val to property $action
      */
-    public function __set($var, $value)
+    public function setAction($val)
     {
-        if (!isset($this->$var) || $var == "nonce") {
-            return;
-        }
-
-        $this->$var = $value;
+        $this->action = $val;
     }
 
     /**
@@ -100,6 +116,6 @@ class Nonce
      */
     public function generateNonceField($referer = true, $echo = true)
     {
-        return wp_nonce_field($this->action, $this->name, $referer = true, $echo = true);
+        return wp_nonce_field($this->action, $this->name, $referer, $echo);
     }
 }

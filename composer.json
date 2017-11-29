@@ -2,6 +2,8 @@
 	"name": "WpNonce",
 	
 	"description": "running wordpress nonce in opject orianted manner",
+
+	"homepage": "https://github.com/mahdy-nasr/WpNonce",
 	
 	"license": "MIT",
 
@@ -14,9 +16,9 @@
 
 	"autoload": {
 
-		"PSR-4": {
+		"psr-4": {
 
-			"WpNonce": "src"
+			"WpNonce\\": "src"
 		}
 	}
 }
