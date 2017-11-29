@@ -21,7 +21,7 @@ class Nonce
 
     /**
      * convert class to string and return nonce as result
-     * @since 1.0 
+     * @since 1.0
      * @return string Nonce value
      */
     public function __toString()

@@ -1,0 +1,22 @@
+{
+	"name": "WpNonce",
+	
+	"description": "running wordpress nonce in opject orianted manner",
+	
+	"license": "MIT",
+
+	"authors": [
+		{
+			"name": "Mahdy Nasr",
+			"email": "mahdy.m.nasr@gmail.com"
+		}
+	],
+
+	"autoload": {
+
+		"PSR-4": {
+
+			"WpNonce": "src"
+		}
+	}
+}
