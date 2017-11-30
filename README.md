@@ -74,7 +74,6 @@ if (\WpNonce\NonceVerifier::verify($nonce, $action)) {...}
 
 Verifying using checkAdminReferer($action, $input_name = "_wpnonce") function.
 ```PHP
-/* */
 if (\WpNonce\NonceVerifier::checkAdminReferer($action)) {...}
 ```
 ### Verify Ajax requist 
