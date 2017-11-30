@@ -110,7 +110,7 @@ class Nonce
      * display or return a hidden field for Nonce
      *
      * @since 1.0
-     * @param bool       $referer Optional. assign validation. Default true.
+     * @param bool       $referer Optional. for referer. Default true.
      * @param bool       $echo    Optional. display if true or return if false. Default true.
      * @return string Nonce HTML field.
      */
