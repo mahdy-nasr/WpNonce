@@ -2,7 +2,7 @@
 Wordpress nonce in an object-oriented manner 
 
 ## Usage
-this package used instead of wp_nonce_*() functionalities in WordPress. 
+this package used instead of wp_nonce_*() functions in WordPress. 
 it built in an object-oriented way and also make the code more readable.
 
 ## Environment 
